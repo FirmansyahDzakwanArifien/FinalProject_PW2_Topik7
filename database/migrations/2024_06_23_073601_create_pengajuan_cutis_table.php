@@ -16,7 +16,7 @@ return new class extends Migration
             $table->date('tgl_awal');
             $table->date('tgl_akhir');
             $table->integer('jumlah');
-            $table->string('ket');
+            $table->text('ket');
             $table->enum('status', ['Disetujui','Tidak Disetujui']);
             $table->foreignId('nip')->constrained('pegawais');
             $table->timestamps();

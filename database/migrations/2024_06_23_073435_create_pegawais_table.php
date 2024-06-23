@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('tmp_lahir');
             $table->date('tgl_lahir');
             $table->string('telpon');
-            $table->string('alamat');
+            $table->text('alamat');
             $table->foreignId('divisi_id')->constrained('divisis')->onDelete('cascade');
             $table->timestamps();
         });
