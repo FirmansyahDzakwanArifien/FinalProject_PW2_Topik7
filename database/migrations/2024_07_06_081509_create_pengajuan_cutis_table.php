@@ -18,7 +18,8 @@ return new class extends Migration
             $table->integer('jumlah');
             $table->text('ket');
             $table->enum('status', ['Disetujui','Tidak Disetujui']);
-            $table->foreignId('nip')->constrained('pegawais');
+            $table->string('nip'); // Ubah tipe data menjadi string
+            $table->foreign('nip')->references('nip')->on('pegawais')->onDelete('cascade'); // Definisikan foreign key dengan tipe data yang cocok
             $table->timestamps();
         });
     }

@@ -18,7 +18,8 @@ return new class extends Migration
             $table->date('tgl_lahir');
             $table->string('telpon');
             $table->text('alamat');
-            $table->foreignId('divisi_id')->constrained('divisis')->onDelete('cascade');
+            $table->unsignedBigInteger('divisi_id'); // Ubah tipe data menjadi unsignedBigInteger
+            $table->foreign('divisi_id')->references('id')->on('divisis')->onDelete('cascade'); // Gunakan metode foreign
             $table->timestamps();
         });
     }

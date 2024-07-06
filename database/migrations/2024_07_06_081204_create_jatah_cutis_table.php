@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->integer('tahun');
             $table->integer('jumlah');
-            $table->foreignId('nip')->constrained('pegawais');
+            $table->string('nip'); // Ubah tipe data menjadi string
+            $table->foreign('nip')->references('nip')->on('pegawais')->onDelete('cascade'); // Definisikan foreign key dengan tipe data yang cocok
             $table->timestamps();
         });
     }
