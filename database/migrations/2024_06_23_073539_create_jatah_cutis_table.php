@@ -9,24 +9,22 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    // Migration for divisis table
-    public function up()
+    public function up(): void
     {
-        Schema::create('divisis', function (Blueprint $table) {
+        Schema::create('jatah_cutis', function (Blueprint $table) {
             $table->id();
-            $table->string('kode');
-            $table->string('name');
-            $table->string('manager');
+            $table->integer('tahun');
+            $table->integer('jumlah');
+            $table->string('nip');
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('divisis');
+        Schema::dropIfExists('jatah_cutis');
     }
 };
