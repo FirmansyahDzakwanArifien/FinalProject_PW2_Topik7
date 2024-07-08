@@ -19,9 +19,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-require __DIR__.'/auth.php';
 
 //Pegawai
 Route::get('/dashboard/pegawai', [PegawaiController::class, 'index']);
@@ -31,8 +28,6 @@ Route::get('/dashboard/pegawai/{nip}', [PegawaiController::class, 'show'])->name
 Route::get('/dashboard/pegawai/edit/{nip}', [PegawaiController::class, 'edit']);
 Route::put('/dashboard/pegawai/update/{nip}', [PegawaiController::class, 'update']);
 Route::delete('/dashboard/pegawai/destroy/{id}', [PegawaiController::class, 'destroy']);
-
-
 
 //Divisi
 Route::get('/dashboard/divisi', [DivisiController::class, 'index']);
@@ -60,3 +55,11 @@ Route::get('/dashboard/jatah_cuti/{id}', [JatahCutiController::class, 'show'])->
 Route::get('/dashboard/jatah_cuti/edit/{id}', [JatahCutiController::class, 'edit']);
 Route::put('/dashboard/jatah_cuti/update/{id}', [JatahCutiController::class, 'update']);
 Route::delete('/dashboard/jatah_cuti/destroy/{id}', [JatahCutiController::class, 'destroy']);
+
+
+});
+
+require __DIR__.'/auth.php';
+
+
+
