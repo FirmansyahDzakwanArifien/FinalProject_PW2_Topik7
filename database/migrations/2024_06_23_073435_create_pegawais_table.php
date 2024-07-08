@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('pegawais', function (Blueprint $table) {
             $table->string('nip')->primary();
+            $table->string('nama');
             $table->enum('gender', ['Laki-Laki', 'Perempuan']);
             $table->string('tmp_lahir');
             $table->date('tgl_lahir');
