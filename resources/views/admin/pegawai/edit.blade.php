@@ -11,6 +11,12 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label for="nama" class="col-sm-4 col-form-label">Nama</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama" value="{{ $pegawai->nama ?? '' }}">
+                </div>
+            </div>
+            <div class="form-group row">
                 <label for="gender" class="col-sm-4 col-form-label">Gender</label>
                 <div class="col-sm-8 I">
                     <div class="form-check">
@@ -53,12 +59,12 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="divisi_id" class="col-sm-4 col-form-label">Nama</label>
+                <label for="divisi_id" class="col-sm-4 col-form-label">Nama Divisi</label>
                 <div class="col-sm-8">
                     <select class="form-control" id="divisi_id" name="divisi_id">
-                        <option value="">Pilih Nama</option>
+                        <option value="">Pilih Divisi</option>
                         @foreach($divisis as $divisi)
-                        <option value="{{ $divisi->manager }}" {{ $pegawai->divisi_id == $divisi->manager ? 'selected' : '' }}>{{ $divisi->manager }}</option>
+                        <option value="{{ $divisi->name}}" {{ $pegawai->divisi_id == $divisi->name ? 'selected' : '' }}>{{ $divisi->name}}</option>
                         @endforeach
                     </select>
                 </div>

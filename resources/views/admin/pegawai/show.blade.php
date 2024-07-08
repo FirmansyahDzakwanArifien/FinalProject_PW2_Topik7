@@ -6,17 +6,19 @@
         <table class="table table-bordered ">
             <tr class="table-info">
                 <th>NIP</th>
+                <th>Nama</th>
                 <th>Gender</th>
                 <th>Tempat Lahir</th>
                 <th>Tanggal Lahir</th>
                 <th>No.Handphone</th>
                 <th>Alamat</th>
-                <th>Nama</th>
+                <th>Divisi</th>
                 <th>Created at</th>
                 <th>Updated at</th>
             </tr>
             <tr>
                 <td>{{ $pegawai->nip}}</td>
+                <td>{{ $pegawai->nama}}</td>
                 <td>{{ $pegawai->gender }}</td>
                 <td>{{ $pegawai->tmp_lahir }}</td>
                 <td>{{ $pegawai->tgl_lahir }}</td>

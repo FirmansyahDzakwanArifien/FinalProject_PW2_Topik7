@@ -29,15 +29,6 @@ Route::get('/dashboard/pegawai/edit/{nip}', [PegawaiController::class, 'edit']);
 Route::put('/dashboard/pegawai/update/{nip}', [PegawaiController::class, 'update']);
 Route::delete('/dashboard/pegawai/destroy/{id}', [PegawaiController::class, 'destroy']);
 
-//Divisi
-Route::get('/dashboard/divisi', [DivisiController::class, 'index']);
-Route::get('/dashboard/divisi/create', [DivisiController::class, 'create']);
-Route::post('/dashboard/divisi', [DivisiController::class, 'store']);
-Route::get('/dashboard/divisi/{id}', [DivisiController::class, 'show'])->name('divisi.show');
-Route::get('/dashboard/divisi/edit/{id}', [DivisiController::class, 'edit']);
-Route::put('/dashboard/divisi/update/{id}', [DivisiController::class, 'update']);
-Route::delete('/dashboard/divisi/destroy/{id}', [DivisiController::class, 'destroy']);
-
 //Pengajuan Cuti
 Route::get('/dashboard/pengajuan_cuti', [PengajuaCutiController::class, 'index']);
 Route::get('/dashboard/pengajuan_cuti/create', [PengajuaCutiController::class, 'create']);
@@ -47,6 +38,17 @@ Route::get('/dashboard/pengajuan_cuti/edit/{id}', [PengajuaCutiController::class
 Route::put('/dashboard/pengajuan_cuti/update/{id}', [PengajuaCutiController::class, 'update']);
 Route::delete('/dashboard/pengajuan_cuti/destroy/{id}', [PengajuaCutiController::class, 'destroy']);
 
+Route::middleware('admin')->prefix('pasien')->group(function(){
+
+//Divisi
+Route::get('/dashboard/divisi', [DivisiController::class, 'index']);
+Route::get('/dashboard/divisi/create', [DivisiController::class, 'create']);
+Route::post('/dashboard/divisi', [DivisiController::class, 'store']);
+Route::get('/dashboard/divisi/{id}', [DivisiController::class, 'show'])->name('divisi.show');
+Route::get('/dashboard/divisi/edit/{id}', [DivisiController::class, 'edit']);
+Route::put('/dashboard/divisi/update/{id}', [DivisiController::class, 'update']);
+Route::delete('/dashboard/divisi/destroy/{id}', [DivisiController::class, 'destroy']);
+
 //Jatah Cuti
 Route::get('/dashboard/jatah_cuti', [JatahCutiController::class, 'index']);
 Route::get('/dashboard/jatah_cuti/create', [JatahCutiController::class, 'create']);
@@ -55,8 +57,7 @@ Route::get('/dashboard/jatah_cuti/{id}', [JatahCutiController::class, 'show'])->
 Route::get('/dashboard/jatah_cuti/edit/{id}', [JatahCutiController::class, 'edit']);
 Route::put('/dashboard/jatah_cuti/update/{id}', [JatahCutiController::class, 'update']);
 Route::delete('/dashboard/jatah_cuti/destroy/{id}', [JatahCutiController::class, 'destroy']);
-
-
+    });
 });
 
 require __DIR__.'/auth.php';

@@ -34,6 +34,7 @@ class PegawaiController extends Controller
         //validasi form input
         $validated = $request->validate([
             'nip' => 'required|string',
+            'nama' => 'required|string',
             'gender' => 'required|string',
             'tmp_lahir' => 'required|string',
             'tgl_lahir' => 'required|date',
@@ -74,6 +75,7 @@ class PegawaiController extends Controller
     {
         $validated = $request->validate([
             'nip' => 'required|string',
+            'nama' => 'required|string',
             'gender' => 'required|string',
             'tmp_lahir' => 'required|string',
             'tgl_lahir' => 'required|date',
