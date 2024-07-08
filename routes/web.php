@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PengajuaCutiController;
 use App\Http\Controllers\JatahCutiController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,26 +40,26 @@ Route::get('/dashboard/pengajuan_cuti/edit/{id}', [PengajuaCutiController::class
 Route::put('/dashboard/pengajuan_cuti/update/{id}', [PengajuaCutiController::class, 'update']);
 Route::delete('/dashboard/pengajuan_cuti/destroy/{id}', [PengajuaCutiController::class, 'destroy']);
 
-Route::middleware('admin')->prefix('pasien')->group(function(){
+        Route::middleware('admin')->group(function(){
 
-//Divisi
-Route::get('/dashboard/divisi', [DivisiController::class, 'index']);
-Route::get('/dashboard/divisi/create', [DivisiController::class, 'create']);
-Route::post('/dashboard/divisi', [DivisiController::class, 'store']);
-Route::get('/dashboard/divisi/{id}', [DivisiController::class, 'show'])->name('divisi.show');
-Route::get('/dashboard/divisi/edit/{id}', [DivisiController::class, 'edit']);
-Route::put('/dashboard/divisi/update/{id}', [DivisiController::class, 'update']);
-Route::delete('/dashboard/divisi/destroy/{id}', [DivisiController::class, 'destroy']);
+        //Divisi
+        Route::get('/dashboard/divisi', [DivisiController::class, 'index']);
+        Route::get('/dashboard/divisi/create', [DivisiController::class, 'create']);
+        Route::post('/dashboard/divisi', [DivisiController::class, 'store']);
+        Route::get('/dashboard/divisi/{id}', [DivisiController::class, 'show'])->name('divisi.show');
+        Route::get('/dashboard/divisi/edit/{id}', [DivisiController::class, 'edit']);
+        Route::put('/dashboard/divisi/update/{id}', [DivisiController::class, 'update']);
+        Route::delete('/dashboard/divisi/destroy/{id}', [DivisiController::class, 'destroy']);
 
-//Jatah Cuti
-Route::get('/dashboard/jatah_cuti', [JatahCutiController::class, 'index']);
-Route::get('/dashboard/jatah_cuti/create', [JatahCutiController::class, 'create']);
-Route::post('/dashboard/jatah_cuti', [JatahCutiController::class, 'store']);
-Route::get('/dashboard/jatah_cuti/{id}', [JatahCutiController::class, 'show'])->name('jatah_cuti.show');
-Route::get('/dashboard/jatah_cuti/edit/{id}', [JatahCutiController::class, 'edit']);
-Route::put('/dashboard/jatah_cuti/update/{id}', [JatahCutiController::class, 'update']);
-Route::delete('/dashboard/jatah_cuti/destroy/{id}', [JatahCutiController::class, 'destroy']);
-    });
+        //Jatah Cuti
+        Route::get('/dashboard/jatah_cuti', [JatahCutiController::class, 'index']);
+        Route::get('/dashboard/jatah_cuti/create', [JatahCutiController::class, 'create']);
+        Route::post('/dashboard/jatah_cuti', [JatahCutiController::class, 'store']);
+        Route::get('/dashboard/jatah_cuti/{id}', [JatahCutiController::class, 'show'])->name('jatah_cuti.show');
+        Route::get('/dashboard/jatah_cuti/edit/{id}', [JatahCutiController::class, 'edit']);
+        Route::put('/dashboard/jatah_cuti/update/{id}', [JatahCutiController::class, 'update']);
+        Route::delete('/dashboard/jatah_cuti/destroy/{id}', [JatahCutiController::class, 'destroy']);
+            });
 });
 
 require __DIR__.'/auth.php';
