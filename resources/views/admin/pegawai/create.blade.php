@@ -54,7 +54,7 @@
             <div class="form-group row">
                 <label for="alamat" class="col-sm-4 col-form-label">Alamat</label>
                 <div class="col-sm-8">
-                    <textarea name="alamat" id="alamat" cols="30" rows="5"></textarea>
+                    <textarea name="alamat" id="alamat" cols="84" rows="5"></textarea>
                 </div>
             </div>
             <div class="form-group row">
