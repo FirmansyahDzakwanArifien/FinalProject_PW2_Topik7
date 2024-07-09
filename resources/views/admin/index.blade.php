@@ -6,54 +6,52 @@
             <div class="col-lg-3 col-6">
                 <div class="small-box bg-info">
                     <div class="inner">
-                        
+                        <h3>{{ $divisiCount }}<sup style="font-size: 20px"></sup></h3>
                         <p>Divisi</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                     </div>
-                    <a href="{{url ('dashboard/kelurahan')}}" class="small-box-footer">Lihat data Divisi<i
-                            class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ url('dashboard/divisi') }}" class="small-box-footer">Lihat Data Divisi <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
 
             <div class="col-lg-3 col-6">
                 <div class="small-box bg-success">
                     <div class="inner">
-                        
+                        <h3>{{ $pegawaiCount }}<sup style="font-size: 20px"></sup></h3>
                         <p>Pegawai</p>
-                    </div> 
+                    </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
                     </div>
-                    <a href="{{url ('dashboard/pasien')}}" class="small-box-footer">Lihat data pegawai <i
-                            class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ url('dashboard/pegawai') }}" class="small-box-footer">Lihat Data Pegawai <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
 
             <div class="col-lg-3 col-6">
                 <div class="small-box bg-warning">
                     <div class="inner">
-                        <h3>0<sup style="font-size: 20px">%</sup></h3>
-                        <p>(Data kosong)</p>
+                        <h3>{{ $pengajuan_cutiCount }}<sup style="font-size: 20px"></sup></h3>
+                        <p>Pengajuan Cuti</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ url('dashboard/pengajuan_cuti') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
 
             <div class="col-lg-3 col-6">
                 <div class="small-box bg-danger">
                     <div class="inner">
-                        <h3>0</h3>
-                        <p>(Data Kosong)</p>
+                        <h3>{{ $jatahcutiCount }}</h3>
+                        <p>Jatah Cuti Pegawai</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ url('dashboard/jatah_cuti') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
         </div>
