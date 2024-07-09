@@ -42,10 +42,10 @@
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
-                            <i class="right fas fa-angle-left"></i>
+                            {{-- <i class="right fas fa-angle-left"></i> --}}
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
+                    {{-- <ul class="nav nav-treeview"> --}}
                         @auth
                             @if (Auth::user()->role == User:: ROLE_ADMIN)
                             <li class="nav-item">

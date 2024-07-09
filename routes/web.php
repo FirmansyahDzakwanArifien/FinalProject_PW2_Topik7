@@ -9,11 +9,11 @@ use App\Http\Controllers\PengajuaCutiController;
 use App\Http\Controllers\JatahCutiController;
 
 
-Route::middleware('auth')->group(function () {
+
     Route::get('/', function () {
         return view('user/index');
     })->name('user');
-});
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
