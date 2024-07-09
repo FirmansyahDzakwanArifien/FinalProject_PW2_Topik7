@@ -1,3 +1,5 @@
+@use(App\Models\User)
+
 <x-layout>
   <x-slot name="page_name">Halaman Pegawai</x-slot>
   <x-slot name="page_content">
@@ -55,15 +57,21 @@
               <td>{{ $pegawai->alamat}}</td>
               <td>{{ $pegawai->divisi_id}}</td>
               <td><a href="{{ route('pegawai.show', $pegawai->nip) }}" class="btn btn-primary text-light"> <i class="far fa-eye"></i> Lihat </a> |
-                  <button type="submit" class="btn btn-warning"><a href="{{url('dashboard/pegawai/edit', $pegawai->nip) }}" class="text-dark"><i class="far fa-edit"></i> Edit</a></button> |
-                  <form action="{{url('dashboard/pegawai/destroy', $pegawai->nip)}}" method="post" class="d-inline">
-                      @csrf
-                      @method('delete')
-                      <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?')"><i class="far fa-trash-alt"></i> Hapus</button>
-                  </form>
+                @Auth
+              @if (Auth::user()->role == User:: ROLE_ADMIN)
+                <button type="submit" class="btn btn-warning"><a href="{{url('dashboard/pegawai/edit', $pegawai->nip) }}" class="text-dark"><i class="far fa-edit"></i> Edit</a></button> |
+                <form action="{{url('dashboard/pegawai/destroy', $pegawai->nip)}}" method="post" class="d-inline">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data?')"><i class="far fa-trash-alt"></i> Hapus</button>
+              </form>
+              @endif
+              @endauth
+
               </td>
           </tr>
           @endforeach
       </table>
   </x-slot>
 </x-layout>
+
