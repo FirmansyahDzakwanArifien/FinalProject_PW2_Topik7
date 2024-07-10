@@ -1,5 +1,6 @@
 <x-layout>
     <x-slot name="page_name">Halaman Jatah Cuti</x-slot>
+    <x-slot name="page_title">Berikut adalah data Jatah Cuti Pegawai :</x-slot>
     <x-slot name="page_content">
 
         @if (session('pesan'))

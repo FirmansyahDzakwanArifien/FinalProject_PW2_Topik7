@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name="page_name">Halaman Divisi</x-slot>
-    <x-slot name="page_title">Berikut adalah data Divisi :</x-slot>
+    <x-slot name="page_title">Berikut adalah data Divisi Perusahaan:</x-slot>
     <x-slot name="page_content">
 
         @if (session('pesan'))

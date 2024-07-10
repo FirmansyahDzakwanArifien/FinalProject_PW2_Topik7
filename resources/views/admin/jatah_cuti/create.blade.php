@@ -1,5 +1,6 @@
 <x-layout>
     <x-slot name="page_name">Halaman Jatah Cuti / Create</x-slot>
+    <x-slot name="page_title">Lengkapi Data Anda dengan Teliti di Bawah Ini :</x-slot>
     <x-slot name="page_content">
         @if (count($errors)>0)
         <div class="alert alert-danger">

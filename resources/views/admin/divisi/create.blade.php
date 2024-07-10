@@ -1,5 +1,6 @@
 <x-layout>
     <x-slot name="page_name">Halaman Divisi / Create</x-slot>
+    <x-slot name="page_title">Lengkapi Data Anda dengan Teliti di Bawah Ini :</x-slot>
     <x-slot name="page_content">
         @if (count($errors)>0)
         <div class="alert alert-danger">
@@ -10,6 +11,7 @@
             </ul>
         </div>
         @endif
+
         <form class="forms-sample" action="{{ url('dashboard/divisi') }}" method="post">
             @csrf
             <div class="form-group row">
@@ -38,5 +40,6 @@
                 </div>
             </div>
         </form>
+        
     </x-slot>
 </x-layout>

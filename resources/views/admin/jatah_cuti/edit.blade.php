@@ -1,5 +1,7 @@
 <x-layout>
     <x-slot name="page_name">Halaman Edit / Edit</x-slot>
+    <x-slot name="page_title">Silakan Perbarui Data Anda dengan Teliti :</x-slot>
+
     <x-slot name="page_content">
         <form class="forms-sample" action="{{ url('dashboard/jatah_cuti/update', $jatah_cuti->id) }}" method="post">
             @csrf

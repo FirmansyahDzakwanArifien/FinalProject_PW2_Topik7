@@ -1,5 +1,6 @@
 <x-layout>
     <x-slot name="page_name">Halaman Pengajuan Cuti / Edit</x-slot>
+    <x-slot name="page_title">Silakan Perbarui Data Anda dengan Teliti :</x-slot>
     <x-slot name="page_content">
         <form class="forms-sample" action="{{ url('dashboard/pengajuan_cuti/update', $pengajuan_cuti->id) }}" method="post">
             @csrf

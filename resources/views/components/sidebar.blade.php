@@ -2,7 +2,7 @@
 
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{ asset('admin/index3.html')}}" class="brand-link">
+    <a href="{{ url('/')}}" class="brand-link">
         <img src="{{ asset('admin/dist/img/logo2.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
         <span class="brand-text font-weight-light">Cuti<span style="color: #18D26E;">Now</span></span>
@@ -62,7 +62,7 @@
                 @endauth
                 <li class="nav-item">
                     <a href="{{ asset('dashboard/pegawai')}}" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="nav-icon fa fa-user-plus"></i>
                         <p>Data Pegawai</p>
                     </a>
                 </li>
@@ -76,7 +76,7 @@
                 @if (Auth::user()->role == User:: ROLE_ADMIN)
                 <li class="nav-item">
                     <a href="{{ asset('dashboard/jatah_cuti')}}" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
+                        <i class="nav-icon fa fa-calendar"></i>
                         <p>Data Jatah Cuti</p>
                     </a>
                 </li>

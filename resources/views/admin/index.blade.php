@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name="page_name">Dashboard</x-slot>
-    <x-slot name="page_title">Welcome to Dashboard!</x-slot>
+    <x-slot name="page_title">Selamat Datang di Dashboard Cuti</x-slot>
     <x-slot name="page_content">
         <div class="row">
             <div class="col-lg-3 col-6">
@@ -36,7 +36,7 @@
                         <p>Pengajuan Cuti</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
+                        <i class="ion ion-edit"></i>
                     </div>
                     <a href="{{ url('dashboard/pengajuan_cuti') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
@@ -46,10 +46,10 @@
                 <div class="small-box bg-danger">
                     <div class="inner">
                         <h3>{{ $jatahcutiCount }}</h3>
-                        <p>Jatah Cuti Pegawai</p>
+                        <p>Jatah Cuti</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-bag"></i>
+                        <i class="ion ion-android-calendar"></i>
                     </div>
                     <a href="{{ url('dashboard/jatah_cuti') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>

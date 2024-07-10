@@ -1,5 +1,6 @@
 <x-layout>
     <x-slot name="page_name">Halaman Pengajuan Cuti / Create</x-slot>
+    <x-slot name="page_title">Lengkapi Data Anda dengan Teliti di Bawah Ini :</x-slot>
     <x-slot name="page_content">
         <form class="forms-sample" action="{{ url('dashboard/pengajuan_cuti') }}" method="post">
             @csrf

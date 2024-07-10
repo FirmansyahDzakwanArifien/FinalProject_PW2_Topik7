@@ -1,5 +1,6 @@
 <x-layout>
     <x-slot name="page_name">Halaman Divisi / Edit</x-slot>
+    <x-slot name="page_title">Silakan Perbarui Data Anda dengan Teliti :</x-slot>
     <x-slot name="page_content">
         <form class="forms-sample" action="{{ url('dashboard/divisi/update', $divisi->id) }}" method="post">
             @csrf
