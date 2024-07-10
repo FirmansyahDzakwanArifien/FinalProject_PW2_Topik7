@@ -2,6 +2,7 @@
 
 <x-layout>
   <x-slot name="page_name">Halaman Pegawai</x-slot>
+  <x-slot name="page_title">Berikut adalah data pegawai :</x-slot>
   <x-slot name="page_content">
 
       @if (session('pesan'))

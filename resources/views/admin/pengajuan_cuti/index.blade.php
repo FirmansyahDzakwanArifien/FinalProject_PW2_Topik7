@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot name="page_name">Halaman Pengajuan Cuti</x-slot>
+    <x-slot name="page_title">Berikut adalah riwayat pengajuan cuti pegawai :</x-slot>
     <x-slot name="page_content">
-
         @if (session('pesan'))
         <div class="alert alert-primary alert-dismissible fade show" role="alert">
             <strong>{{ session('pesan') }}</strong>
@@ -62,5 +62,6 @@
             </tr>
             @endforeach
         </table>
+
     </x-slot>
 </x-layout>
