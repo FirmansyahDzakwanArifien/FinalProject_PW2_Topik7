@@ -57,6 +57,7 @@
               <li><a class="nav-link scrollto" href="#about">About</a></li>
               <li><a class="nav-link scrollto" href="#services">Services</a></li>
               <li><a class="nav-link scrollto" href="#team">Team</a></li>
+              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
               <li class="dropdown"><a href="#"><span>Cuti Pegawai</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
                   <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
@@ -64,8 +65,20 @@
                   <li><a href="{{ route('admin.pegawai.index') }}">Riwayat Cuti</a></li>
                 </ul>
               </li>
-              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
               
+        <li class="nav-item dropdown">
+          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+              {{ Auth::user()->name}}
+          </a>
+          <div class="dropdown-menu dropdown-menu-end"  aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" style="color: #18d26e;" href="{{ route('logout') }}"
+                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                  {{ __('Logout') }}
+          </a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+          </form>
+        </li>
               @else
               <li><a class="nav-link scrollto" href="{{ route('login') }}">Log In</a></li>
               @if (Route::has('register'))
@@ -94,10 +107,10 @@
           <div class="carousel-item active" style="background-image: url('{{ asset('user/dist/img/hero-carousel/1.jpg') }}')">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Smart Leave Solutions</h2>
-                <p class="animate__animated animate__fadeInUp">Sebuah sistem dan menjadi solusi yang efisien untuk
+                <h2 class="animate_animated animate_fadeInDown">Smart Leave Solutions</h2>
+                <p class="animate_animated animate_fadeInUp">Sebuah sistem dan menjadi solusi yang efisien untuk
                   mengelola permintaan dan persetujuan cuti pegawai.</p>
-                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
+                <a href="#featured-services" class="btn-get-started scrollto animate_animated animate_fadeInUp">Get
                   Started</a>
               </div>
             </div>
@@ -106,10 +119,10 @@
           <div class="carousel-item" style="background-image: url('{{ asset('user/dist/img/hero-carousel/2.jpg') }}')">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Cuti Tanpa Ribet</h2>
-                <p class="animate__animated animate__fadeInUp">Nikmati kemudahan dalam mengajukan dan mengelola cuti
+                <h2 class="animate_animated animate_fadeInDown">Cuti Tanpa Ribet</h2>
+                <p class="animate_animated animate_fadeInUp">Nikmati kemudahan dalam mengajukan dan mengelola cuti
                   dengan sistem informasi yang modern dan user-friendly.</p>
-                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
+                <a href="#featured-services" class="btn-get-started scrollto animate_animated animate_fadeInUp">Get
                   Started</a>
               </div>
             </div>
@@ -118,10 +131,10 @@
           <div class="carousel-item" style="background-image: url('{{ asset('user/dist/img/hero-carousel/3.jpg') }}')">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Track Your Leave Balance</h2>
-                <p class="animate__animated animate__fadeInUp">Pegawai dapat dengan mudah melihat jatah cuti mereka dan
+                <h2 class="animate_animated animate_fadeInDown">Track Your Leave Balance</h2>
+                <p class="animate_animated animate_fadeInUp">Pegawai dapat dengan mudah melihat jatah cuti mereka dan
                   merencanakan liburan bersama keluarga dengan lebih baik.</p>
-                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
+                <a href="#featured-services" class="btn-get-started scrollto animate_animated animate_fadeInUp">Get
                   Started</a>
               </div>
             </div>
@@ -130,10 +143,10 @@
           <div class="carousel-item" style="background-image: url('{{ asset('user/dist/img/hero-carousel/5.jpg') }}')">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Fitur Cuti Lengkap</h2>
-                <p class="animate__animated animate__fadeInUp">Sistem informasi kami menyediakan fitur lengkap mulai
+                <h2 class="animate_animated animate_fadeInDown">Fitur Cuti Lengkap</h2>
+                <p class="animate_animated animate_fadeInUp">Sistem informasi kami menyediakan fitur lengkap mulai
                   dari pengajuan, persetujuan, hingga pelaporan cuti pegawai.</p>
-                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
+                <a href="#featured-services" class="btn-get-started scrollto animate_animated animate_fadeInUp">Get
                   Started</a>
               </div>
             </div>
@@ -142,10 +155,10 @@
           <div class="carousel-item" style="background-image: url('{{ asset('user/dist/img/hero-carousel/4.jpg') }}')">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Transparent Leave Management</h2>
-                <p class="animate__animated animate__fadeInUp">Sistem kami memastikan transparansi dalam pengelolaan
+                <h2 class="animate_animated animate_fadeInDown">Transparent Leave Management</h2>
+                <p class="animate_animated animate_fadeInUp">Sistem kami memastikan transparansi dalam pengelolaan
                   cuti, sehingga semua pengajuan dan persetujuan dapat dipantau dengan jelas.</p>
-                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
+                <a href="#featured-services" class="btn-get-started scrollto animate_animated animate_fadeInUp">Get
                   Started</a>
               </div>
             </div>
@@ -664,7 +677,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>CutiNow</strong>. All Rights Reserved
+        &copy; Copyright <strong>Cuti<span style="color: #18d26e;">Now</span></strong>. All Rights Reserved
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -685,7 +698,11 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('user/dist/js/main.js')}}"></script>
+  <script src="{{ asset('admin/plugins/jquery/jquery.min.js')}}"></script>
+  <!-- Bootstrap 4 -->
+  <script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
+  
 </body>
 
 </html>

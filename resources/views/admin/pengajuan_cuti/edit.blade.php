@@ -6,6 +6,17 @@
             @csrf
             @method('put')
             <div class="form-group row">
+                <label for="nip" class="col-sm-4 col-form-label">NIP</label>
+                <div class="col-sm-8">
+                    <select class="form-control" id="nip" name="nip">
+                        <option value="">Pilih NIP</option>
+                        @foreach($pegawais as $pegawai)
+                        <option value="{{ $pegawai->nip }}" {{ $pengajuan_cuti->nip === $pegawai->nip? 'selected' : '' }}>{{ $pegawai->nip }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
                 <label for="tgl_awal" class="col-sm-4 col-form-label">Tanggal Awal</label>
                 <div class="col-sm-8">
                     <input type="date" class="form-control" id="tgl_awal" name="tgl_awal" placeholder="Masukkan Tanggal Awal" value="{{ $pengajuan_cuti->tgl_awal }}">
@@ -40,17 +51,7 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group row">
-                <label for="nip" class="col-sm-4 col-form-label">NIP</label>
-                <div class="col-sm-8">
-                    <select class="form-control" id="nip" name="nip">
-                        <option value="">Pilih NIP</option>
-                        @foreach($pegawais as $pegawai)
-                        <option value="{{ $pegawai->nip }}" {{ $pengajuan_cuti->nip === $pegawai->nip? 'selected' : '' }}>{{ $pegawai->nip }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
+            
             <div class="form-group row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-8">

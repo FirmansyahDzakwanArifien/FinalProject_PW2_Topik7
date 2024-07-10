@@ -44,10 +44,7 @@
               <th>NIP</th>
               <th>Nama</th>
               <th>Gender</th>
-              <th>Tempat Lahir</th>
-              <th>Tanggal Lahir</th>
-              <th>No.Handphone</th>
-              <th>Alamat</th>
+              <th>No. HP</th>
               <th>Divisi</th>
               <th>Aksi</th>
           </tr>
@@ -56,10 +53,7 @@
               <td>{{ $pegawai->nip}}</td>
               <td>{{ $pegawai->nama}}</td>
               <td>{{ $pegawai->gender}}</td>
-              <td>{{ $pegawai->tmp_lahir}}</td>
-              <td>{{ $pegawai->tgl_lahir}}</td>
               <td>{{ $pegawai->telpon}}</td>
-              <td>{{ $pegawai->alamat}}</td>
               <td>{{ $pegawai->divisi_id}}</td>
               <td><a href="{{ route('pegawai.show', $pegawai->nip) }}" class="btn btn-primary text-light"> <i class="far fa-eye"></i> Lihat </a> 
                 @Auth

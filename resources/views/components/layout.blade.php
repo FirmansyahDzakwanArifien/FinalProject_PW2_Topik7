@@ -4,7 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CutiNow - UAS Final Project </title>
+    <title>CutiNow - Application Employee Leave</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="{{ asset('user/dist/img/logo_circle/2.png')}}" rel="icon">
+    <link href="{{ asset('user/dist/img/logo_circle/2.png')}}" rel="apple-touch-icon">
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
