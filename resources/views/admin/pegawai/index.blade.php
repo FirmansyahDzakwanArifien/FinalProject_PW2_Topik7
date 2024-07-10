@@ -31,8 +31,12 @@
         </div>
       @endif
 
-
+      @Auth
+      @if (Auth::user()->role == User:: ROLE_ADMIN)
       <a href="{{ url('dashboard/pegawai/create')}}" class="btn btn-primary">+ Tambah Pegawai</a>
+      @endif
+      @endauth
+
       <br><br>
       <table class="table table-bordered">
           <tr class="table-success">
@@ -56,10 +60,10 @@
               <td>{{ $pegawai->telpon}}</td>
               <td>{{ $pegawai->alamat}}</td>
               <td>{{ $pegawai->divisi_id}}</td>
-              <td><a href="{{ route('pegawai.show', $pegawai->nip) }}" class="btn btn-primary text-light"> <i class="far fa-eye"></i> Lihat </a> |
+              <td><a href="{{ route('pegawai.show', $pegawai->nip) }}" class="btn btn-primary text-light"> <i class="far fa-eye"></i> Lihat </a> 
                 @Auth
               @if (Auth::user()->role == User:: ROLE_ADMIN)
-                <button type="submit" class="btn btn-warning"><a href="{{url('dashboard/pegawai/edit', $pegawai->nip) }}" class="text-dark"><i class="far fa-edit"></i> Edit</a></button> |
+                <button type="submit" class="btn btn-warning"><a href="{{url('dashboard/pegawai/edit', $pegawai->nip) }}" class="text-dark"><i class="far fa-edit"></i> Edit</a></button> 
                 <form action="{{url('dashboard/pegawai/destroy', $pegawai->nip)}}" method="post" class="d-inline">
                     @csrf
                     @method('delete')

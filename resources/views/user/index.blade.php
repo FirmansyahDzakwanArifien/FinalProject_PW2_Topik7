@@ -46,7 +46,7 @@
       <div class="row justify-content-center align-items-center">
         <div class="col-xl-11 d-flex align-items-center justify-content-between">
           <h1 class="logo"><img src="{{ asset('user/dist/img/logo_circle/2.png')}}" class="img-fluid" alt="" srcset=""> <a
-              href="index.html">Cuti<span style="color: #18d26e;">Now</span> </a></h1>
+              href="/">Cuti<span style="color: #18d26e;">Now</span> </a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
           @if (Route::has('login'))
@@ -234,12 +234,12 @@
               </div>
               <h2 class="title"><a href="#">Our Plan</a></h2>
               <p>
-                <b>Transparansi:</b> Kami menjunjung tinggi transparansi dalam setiap aspek layanan kami, memastikan
-                bahwa semua informasi dapat diakses dengan jelas dan akurat.
+                <b>Transparansi:</b> Kami menjunjung tinggi transparansi pada setiap aspek layanan kami, memastikan
+                 semua informasi diakses dengan jelas dan akurat.
               </p>
               <p>
-                <b>Kepuasan Pelanggan:</b> Kami selalu berusaha memberikan layanan terbaik dan mendengarkan kebutuhan
-                serta masukan dari pelanggan kami untuk terus berkembang.
+                <b>Kepuasan Pelanggan:</b> Kami memberikan layanan terbaik dan mendengarkan kebutuhan
+                dari pelanggan kami untuk terus berkembang.
               </p>
             </div>
           </div>

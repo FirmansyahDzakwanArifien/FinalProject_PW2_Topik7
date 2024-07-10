@@ -51,8 +51,8 @@
                 <td>{{ $pengajuan->ket }}</td>
                 <td>{{ $pengajuan->status}}</td>
                 <td>{{ $pengajuan->nip}}</td>
-                <td><a href="{{ route('pengajuan_cuti.show', $pengajuan->id) }}" class="btn btn-primary text-light"> <i class="far fa-eye"></i> Lihat </a> |
-                    <button type="submit" class="btn btn-warning"><a href="{{url('dashboard/pengajuan_cuti/edit', $pengajuan->id) }}" class="text-dark"><i class="far fa-edit"></i> Edit</a></button> |
+                <td><a href="{{ route('pengajuan_cuti.show', $pengajuan->id) }}" class="btn btn-primary text-light"> <i class="far fa-eye"></i> Lihat </a> 
+                    <button type="submit" class="btn btn-warning"><a href="{{url('dashboard/pengajuan_cuti/edit', $pengajuan->id) }}" class="text-dark"><i class="far fa-edit"></i> Edit</a></button> 
                     <form action="{{url('dashboard/pengajuan_cuti/destroy', $pengajuan->id)}}" method="post" class="d-inline">
                         @csrf
                         @method('delete')
