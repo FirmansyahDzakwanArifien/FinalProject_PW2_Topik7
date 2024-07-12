@@ -50,45 +50,48 @@
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
           @if (Route::has('login'))
-          <nav id="navbar" class="navbar">
-              @auth
-              <ul>
-              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-              <li><a class="nav-link scrollto" href="#about">About</a></li>
-              <li><a class="nav-link scrollto" href="#services">Services</a></li>
-              <li><a class="nav-link scrollto" href="#team">Team</a></li>
-              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-              <li class="dropdown"><a href="#"><span>Cuti Pegawai</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                  <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                  <li class="dropdown"><a href="{{ route('admin.pegawai.create') }}"><span>Pengajuan Cuti</span> </a></li>
-                  <li><a href="{{ route('admin.pegawai.index') }}">Riwayat Cuti</a></li>
-                </ul>
-              </li>
-              
-        <li class="nav-item dropdown">
-          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-              {{ Auth::user()->name}}
-          </a>
-          <div class="dropdown-menu dropdown-menu-end"  aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" style="color: #18d26e;" href="{{ route('logout') }}"
-                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                  {{ __('Logout') }}
-          </a>
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-              @csrf
-          </form>
-        </li>
-              @else
-              <li><a class="nav-link scrollto" href="{{ route('login') }}">Log In</a></li>
-              @if (Route::has('register'))
-              <li><a class="nav-link scrollto" href="{{ route('register') }}">Register</a></li>
-                  @endif
-                  @endauth
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-                  </nav>
-              @endif
+    <nav id="navbar" class="navbar">
+        <ul>
+            @auth
+                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>Cuti Pegawai</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                        <li><a href="{{ route('admin.pegawai.create') }}">Pengajuan Cuti</a></li>
+                        <li><a href="{{ route('admin.pegawai.index') }}">Riwayat Cuti</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" style="color: #18d26e;" href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            @else
+                <li><a class="nav-link scrollto" href="{{ route('login') }}">Log In</a></li>
+                @if (Route::has('register'))
+                    <li><a class="nav-link scrollto" href="{{ route('register') }}">Register</a></li>
+                @endif
+            @endauth
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+@endif
+
         </div>
       </div>
 
