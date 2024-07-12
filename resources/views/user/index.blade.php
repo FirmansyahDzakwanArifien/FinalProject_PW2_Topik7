@@ -61,9 +61,9 @@
                 <li class="dropdown">
                     <a href="#"><span>Cuti Pegawai</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                        <li><a href="{{ route('admin.pegawai.create') }}">Pengajuan Cuti</a></li>
-                        <li><a href="{{ route('admin.pegawai.index') }}">Riwayat Cuti</a></li>
+                        <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
+                        <li><a href="{{ url('dashboard/pengajuan_cuti/create') }}">Pengajuan Cuti</a></li>
+                        <li><a href="{{ url('dashboard/pengajuan_cuti') }}">Riwayat Cuti</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
