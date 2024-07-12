@@ -66,7 +66,7 @@
                     <select class="form-control" id="divisi_id" name="divisi_id">
                         <option value="">Pilih Divisi</option>
                         @foreach($divisis as $divisi)
-                            <option value="{{ $divisi->id }}" {{ $pegawai->divisi_id == $divisi->id ? 'selected' : '' }}>
+                            <option value="{{ $divisi->name }}" {{ $pegawai->divisi_id == $divisi->name ? 'selected' : '' }}>
                                 {{ $divisi->name }}
                             </option>
                         @endforeach
