@@ -20,7 +20,7 @@
             </div>
             <div class="form-group row">
                 <label for="gender" class="col-sm-4 col-form-label">Gender</label>
-                <div class="col-sm-8 I">
+                <div class="col-sm-8">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="gender" id="genderLakiLaki" value="Laki-Laki" {{ $pegawai->gender === 'Laki-Laki' ? 'checked' : '' }}>
                         <label class="form-check-label" for="genderLakiLaki">
@@ -57,7 +57,7 @@
             <div class="form-group row">
                 <label for="alamat" class="col-sm-4 col-form-label">Alamat</label>
                 <div class="col-sm-8">
-                    <textarea name="alamat" id="alamat" cols="30" rows="5">{{ $pegawai->alamat ?? '' }}</textarea>
+                    <textarea class="form-control" id="alamat" name="alamat" rows="5" placeholder="Masukkan Alamat">{{ $pegawai->alamat ?? '' }}</textarea>
                 </div>
             </div>
             <div class="form-group row">
@@ -66,7 +66,9 @@
                     <select class="form-control" id="divisi_id" name="divisi_id">
                         <option value="">Pilih Divisi</option>
                         @foreach($divisis as $divisi)
-                        <option value="{{ $divisi->name}}" {{ $pegawai->divisi_id == $divisi->name ? 'selected' : '' }}>{{ $divisi->name}}</option>
+                            <option value="{{ $divisi->id }}" {{ $pegawai->divisi_id == $divisi->id ? 'selected' : '' }}>
+                                {{ $divisi->name }}
+                            </option>
                         @endforeach
                     </select>
                 </div>

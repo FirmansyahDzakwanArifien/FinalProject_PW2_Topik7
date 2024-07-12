@@ -33,11 +33,12 @@
 
         <a href="{{ url('dashboard/jatah_cuti/create')}}" class="btn btn-primary">+ Tambah Jatah Cuti</a>
         <br><br>
-        <table class="table table-bordered">
+        <div class="table-responsive">
+          <table class="table table-bordered">
             <tr class="table-success">
                 <th>Id</th>
                 <th>Tahun</th>
-                <th>Jumlah</th>
+                <th>Jumlah Hari</th>
                 <th>NIP</th>
                 <th>Aksi</th>
             </tr>
@@ -47,8 +48,8 @@
                 <td>{{ $jatah->tahun }}</td>
                 <td>{{ $jatah->jumlah }}</td>
                 <td>{{ $jatah->nip }}</td>
-                <td><a href="{{ route('jatah_cuti.show', $jatah->id) }}" class="btn btn-primary text-light"> <i class="far fa-eye"></i> Lihat </a> |
-                    <button type="submit" class="btn btn-warning"><a href="{{url('dashboard/jatah_cuti/edit', $jatah->id) }}" class="text-dark"><i class="far fa-edit"></i> Edit</a></button> |
+                <td><a href="{{ route('jatah_cuti.show', $jatah->id) }}" class="btn btn-primary text-light"> <i class="far fa-eye"></i> Lihat </a>
+                    <button type="submit" class="btn btn-warning"><a href="{{url('dashboard/jatah_cuti/edit', $jatah->id) }}" class="text-dark"><i class="far fa-edit"></i> Edit</a></button>
                     <form action="{{url('dashboard/jatah_cuti/destroy', $jatah->id)}}" method="post" class="d-inline">
                         @csrf
                         @method('delete')
@@ -58,5 +59,6 @@
             </tr>
             @endforeach
         </table>
+        </div>
     </x-slot>
 </x-layout>

@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="jumlah" class="col-sm-4 col-form-label">Jumlah</label>
+                <label for="jumlah" class="col-sm-4 col-form-label">Jumlah Hari / Bulan</label>
                 <div class="col-sm-8">
                     <input type="number" class="form-control" id="jumlah" name="jumlah" placeholder="Masukkan Jumlah">
                 </div>

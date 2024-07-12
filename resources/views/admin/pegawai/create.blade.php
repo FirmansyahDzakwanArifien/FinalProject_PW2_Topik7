@@ -17,8 +17,8 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="gender" class="col-sm-4 col-form-label">Gender</label>
-                <div class="col-sm-8 I">
+                <label class="col-sm-4 col-form-label">Gender</label>
+                <div class="col-sm-8">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="gender" id="genderLakiLaki" value="Laki-Laki">
                         <label class="form-check-label" for="genderLakiLaki">
@@ -33,7 +33,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="form-group row">
                 <label for="tmp_lahir" class="col-sm-4 col-form-label">Tempat Lahir</label>
                 <div class="col-sm-8">
@@ -55,7 +54,7 @@
             <div class="form-group row">
                 <label for="alamat" class="col-sm-4 col-form-label">Alamat</label>
                 <div class="col-sm-8">
-                    <textarea name="alamat" id="alamat" cols="84" rows="5"></textarea>
+                    <textarea class="form-control" id="alamat" name="alamat" rows="5" placeholder="Masukkan Alamat"></textarea>
                 </div>
             </div>
             <div class="form-group row">
